@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Roadmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        Roadmap Builder
+    </div>
+
+    <button onclick="darkMode()">
+        🌙 Dark Mode
+    </button>
+
+</nav>
+
+<section class="generator">
+
+<h1>Generate Your Learning Roadmap 🚀</h1>
+
+<p id="quote">
+💡 "Success is the sum of small efforts repeated every day."
+</p>
+
+<div class="form-box">
+
+<input
+type="text"
+id="searchCareer"
+placeholder="🔍 Search Career">
+
+<select id="career">
+<option>Select Career Goal</option>
+<option>Web Developer</option>
+<option>Java Developer</option>
+<option>Python Developer</option>
+<option>AI / ML Engineer</option>
+</select>
+
+<select id="level">
+<option>Select Current Level</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+
+<select id="time">
+<option>Study Time</option>
+<option>1 Hour / Day</option>
+<option>2 Hours / Day</option>
+<option>4+ Hours / Day</option>
+</select>
+
+<button onclick="generateRoadmap()">
+Generate Roadmap
+</button>
+
+<button onclick="favoriteRoadmap()">
+❤️ Favorite
+</button>
+
+</div>
+
+<div class="result-container">
+
+<div id="result">
+
+<h2>Your Roadmap will appear here 🚀</h2>
+
+<p>
+Select your options and click
+<b>Generate Roadmap</b>.
+</p>
+
+</div>
+
+<div id="progressBox">
+
+<h2>📊 Progress Dashboard</h2>
+
+<p id="progressText">
+Progress: 0%
+</p>
+
+<div class="progress-container">
+
+<div id="progressBar"></div>
+
+</div>
+
+<br>
+
+<h3>🎯 Today's Goal</h3>
+
+<p>
+Complete one topic from your roadmap.
+</p>
+
+<br>
+
+<h3>⏳ Estimated Completion</h3>
+
+<p id="estimate">
+Select your study time.
+</p>
+
+<br>
+
+<button onclick="downloadCertificate()">
+🏆 Download Certificate
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

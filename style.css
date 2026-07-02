@@ -1,0 +1,372 @@
+/* ===========================
+   SMART ROADMAP BUILDER CSS
+   PART 1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+    color:white;
+    min-height:100vh;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffe066;
+}
+
+/* Hero */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    font-size:22px;
+    line-height:1.8;
+}
+
+button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#4f46e5;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+/* Generator */
+
+.generator{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.generator h1{
+    text-align:center;
+    margin-bottom:35px;
+    font-size:42px;
+}
+
+#quote{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:18px;
+    font-style:italic;
+}
+
+.form-box{
+    background:white;
+    color:#333;
+    padding:30px;
+    border-radius:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.form-box select,
+.form-box input{
+    padding:14px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    min-width:220px;
+    font-size:16px;
+}
+
+.form-box button{
+    margin-top:0;
+}
+
+.result-container{
+    display:flex;
+    gap:30px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+#result,
+#progressBox{
+    flex:1;
+    min-width:320px;
+    background:white;
+    color:#333;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+#result h2,
+#progressBox h2{
+    color:#4f46e5;
+    margin-bottom:20px;
+}
+
+#result label{
+    display:block;
+    margin:15px 0;
+    font-size:18px;
+}
+
+.progress-container{
+    width:100%;
+    height:22px;
+    background:#ddd;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    background:#4f46e5;
+    transition:.5s;
+}
+/* ===========================
+   SMART ROADMAP BUILDER CSS
+   PART 2
+=========================== */
+
+/* Progress */
+
+#progressText{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+#estimate{
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* About */
+
+#about{
+    width:90%;
+    max-width:1000px;
+    margin:80px auto;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+#about h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+#about p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* Contact */
+
+#contact{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+#contact h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+#contact p{
+    font-size:20px;
+    margin-top:15px;
+}
+
+/* Footer */
+
+.footer{
+    margin-top:60px;
+    padding:25px;
+    text-align:center;
+    background:rgba(0,0,0,.2);
+    font-size:18px;
+}
+
+/* Dark Mode */
+
+.dark{
+    background:#111;
+    color:white;
+}
+
+.dark nav{
+    background:#1b1b1b;
+}
+
+.dark .form-box,
+.dark #result,
+.dark #progressBox,
+.dark #about,
+.dark #contact{
+    background:#222;
+    color:white;
+}
+
+.dark .form-box input,
+.dark .form-box select{
+    background:#333;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark #result h2,
+.dark #progressBox h2{
+    color:#7aa2ff;
+}
+
+.dark #progressBar{
+    background:#06b6d4;
+}
+
+/* Animation */
+
+.hero,
+#about,
+#contact,
+.form-box,
+#result,
+#progressBox{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .form-box{
+        flex-direction:column;
+    }
+
+    .form-box input,
+    .form-box select,
+    .form-box button{
+        width:100%;
+    }
+
+    .result-container{
+        flex-direction:column;
+    }
+
+    #about,
+    #contact{
+        padding:30px;
+    }
+
+}
